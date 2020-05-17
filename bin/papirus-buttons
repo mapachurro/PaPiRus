@@ -84,7 +84,7 @@ def main(argv):
 
     papirus.clear()
 
-    write_text(papirus, "Ready... SW1 + SW2 to exit.", SIZE)
+    write_text(papirus, "Buttons ready. SW1 + SW2 to exit.", SIZE)
 
     while True:
         # Exit when SW1 and SW2 are pressed simultaneously
@@ -95,7 +95,7 @@ def main(argv):
             sys.exit()
 
         if GPIO.input(SW1) == False:
-            write_text(papirus, "One", SIZE)
+            show_clock()
 
         if GPIO.input(SW2) == False:
             write_text(papirus, "Two", SIZE)
@@ -112,7 +112,7 @@ def main(argv):
         sleep(0.1)
 
 #begin copypaste from papirus-clock
-def show_clock(argv):
+def show_clock():
 
     """main program - draw and display time and date"""
 
