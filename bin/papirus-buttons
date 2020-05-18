@@ -80,11 +80,11 @@ def main(argv):
 
     # Use smaller font for smaller displays
     if papirus.height <= 96:
-        SIZE = 18
+        SIZE = 25
 
     papirus.clear()
 
-    write_text(papirus, "Buttons ready. SW1 + SW2 to exit.", SIZE)
+    write_text(papirus, "DON'T PANIC. SW1 for clock.", SIZE)
 
     while True:
         # Exit when SW1 and SW2 are pressed simultaneously
